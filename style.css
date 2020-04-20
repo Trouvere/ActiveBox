@@ -52,6 +52,20 @@ p {
   left: 0;
   z-index: 1000;
 }
+.header.fixed {
+  height: auto;
+
+  position: fixed;
+
+  background-color: #31344e;
+}
+
+.header.fixed .header__inner {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  border-bottom: 0;
+}
 
 .header__inner {
   display: flex;
@@ -155,6 +169,7 @@ p {
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
 
   transition: background 0.1s linear;
 }
@@ -165,6 +180,10 @@ p {
 
 .btn--red:hover {
   background-color: #dd3434;
+}
+
+.btn--long {
+  min-width: 280px;
 }
 
 /* Features
@@ -204,7 +223,8 @@ p {
   color: #6c7279;
 }
 
-/* Works */
+/* Works
+===================*/
 .works {
   display: flex;
   flex-wrap: wrap;
@@ -226,6 +246,7 @@ p {
 }
 
 .works__photo {
+  min-width: 100%;
   /* Выравнивание картинки по центру */
   position: absolute;
   top: 50%;
@@ -567,6 +588,12 @@ p {
 
 /* Media
 ===================*/
+@media (max-width: 1300px) {
+  /* Works */
+  .works__item {
+    width: 50%;
+  }
+}
 
 @media (max-width: 991px) {
   /* Nav */
